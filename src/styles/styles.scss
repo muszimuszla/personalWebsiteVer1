@@ -1,0 +1,258 @@
+@import "./variables";
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: $backgroundImage;
+  color: $color;
+  font-family: $font-primary;
+  font-size: $font-size;
+  overflow: hidden;
+  margin:0px;
+}
+
+[data-framer-component-type="ScrollContentWrapper"] > * {
+  position: absolute !important;
+}
+
+.wave_1 {
+  position: absolute;
+  width: 100%;
+  left: -5%;
+  top: -20%;
+  opacity: 0.5;
+  transform: rotate(-5deg);
+  &:nth-child(2) {
+    transform: rotate(-2deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(0deg);
+  }
+  svg {
+    width: 120%;
+    height: 750px;
+  }
+}
+.wave_2 {
+  position: absolute;
+  width: 100%;
+  left: -5%;
+  top: -10%;
+  opacity: 0.5;
+  transform: rotate(1deg);
+  &:nth-child(2) {
+    transform: rotate(4deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(-1deg);
+  }
+  svg {
+    width: 120%;
+    height: 600px;
+  }
+}
+.wave_3 {
+  position: absolute;
+  width: 100%;
+  left: -5%;
+  top: -5%;
+  opacity: 0.5;
+  &:nth-child(2) {
+    transform: rotate(2deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(-4deg);
+  }
+  svg {
+    width: 120%;
+    height: 550px;
+  }
+}
+p {
+  font-family: $font-secondary;
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+}
+h1 {
+  font-weight: 1000;
+  margin-block-start: 0px;
+  margin-block-end: 15px;
+}
+h5{
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+}
+.oneBox {
+  position: relative;
+  width: 80vw;
+  height: 500px;
+  align-self: center;
+  justify-content: space-between;
+  display: flex;
+  margin-left: 10vw;
+  div {
+    align-self: center;
+    h1 {
+      text-align: center;
+      letter-spacing: 0.5vw;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  svg {
+    align-self: center;
+    max-width: 49%;
+    height: 400px;
+      filter: drop-shadow(0 0 4px rgb(60, 0, 77));
+  }
+
+  .textBox {
+    max-width: 39vw;
+    &:nth-child(even) {
+      color: white;
+    }
+  }
+}
+.projects {
+  height: 800px;
+}
+.project {
+  display: flex;
+  flex-direction: row;
+  svg{
+    align-self: flex-start;
+    height: 100px;
+    min-width: 100px;
+    margin-right: 10px;
+    margin-top: 15px;
+    filter: drop-shadow(0 0 2px rgb(60, 0, 77));
+  }
+}
+.columnBox {
+  flex-direction: column;
+}
+
+.socialMediaContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+}
+.icon {
+  svg {
+    height: unset;
+    filter: drop-shadow(0 0 3px rgb(196, 105, 191));
+  }
+  font-size: 4rem;
+}
+a{
+  align-self: flex-start;
+}
+
+@media (max-width: 659px) {
+
+  h1{
+    font-size: 30px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .wave_1 {
+    left: -10%;
+    svg {
+      height: 650px;
+    }
+  }
+  .wave_2 {
+    top: -8%;
+    svg {
+      height: 530px;
+    }
+  }
+  .wave_3 {
+    top: -12%;
+    svg {
+      height: 550px;
+    }
+  }
+  .oneBox {
+    height: 400px;
+    flex-direction: column;
+    .textBox {
+      max-width: 80vw;
+    }
+    svg {
+      max-width: 80%;
+    }
+  }
+  .projects {
+    height: 1050px;
+
+  }
+  .project {
+    svg{
+      height: 80px;
+      min-width: 80px;
+    }
+  }
+
+  .helloFrame{
+    height: 450px !important;
+  }
+  .educationFrame{
+    height: 400px !important;
+    top: 450px !important;
+  }
+  .technologiesFrame{
+    height: 450px !important;
+    top: 900px !important;
+  }
+  .projectsFrame{
+    height: 1050px !important;
+    top: 1360px !important;
+  }
+  .alsoFrame{
+    height: 400px !important;
+    top: 2520px !important;
+  }
+  .contactFrame{
+    height: 400 !important;
+    top: 3020px !important;
+    .oneBox{
+      height: 400;
+      margin-bottom: 50px !important;
+    }
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 660px) and (max-width: 1249px) {
+  .wave_2 {
+    top: -5%;
+    svg {
+      height: 580px;
+    }
+  }
+  .oneBox {
+    height: 450px;
+    flex-direction: column;
+    .textBox {
+      max-width: 80vw;
+    }
+  }
+  .projects {
+    height:930px;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
